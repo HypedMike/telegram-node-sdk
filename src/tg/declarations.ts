@@ -16,7 +16,7 @@ const telegram_url = (path: string = "") => {
 async function tg_fetch(path: string, query?: {
     key: string,
     value: string | number
-}[], method: string = "GET"): Promise<any> {
+}[], method: string = "GET", formData?: FormData): Promise<any> {
 
     // Build query string
     let queryfy = "";
@@ -35,7 +35,8 @@ async function tg_fetch(path: string, query?: {
         method,
         headers: {
             'Content-Type': 'application/json',
-        }
+        },
+        body: formData
     });
 
     const response = await fetched.json();
