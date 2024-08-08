@@ -7,9 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./dist/index.js",
     "build": "tsc ./src/index.ts --outDir ./dist",
-    "dev": "tsc ./src/index.ts --outDir ./dist && dotenv-load node ./dist/index.js"
+    "dev": "tsc ./src/index.ts --outDir ./dist && dotenv-load node ./dist/index.js",
   },
-  "author": "",
+  "author": "Michele Saladino",
   "license": "ISC",
   "dependencies": {
     "dotenv-load": "^3.0.0",
